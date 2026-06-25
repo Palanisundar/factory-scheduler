@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.factory</groupId>
+    <artifactId>factory-scheduler</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Factory Cycle Scheduler</name>
+    <description>
+        Given N factory stations where each cycle runs N-1 stations,
+        compute the minimum cycles to reach exact target run counts.
+    </description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.factory.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <finalName>factory-scheduler</finalName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
